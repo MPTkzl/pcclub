@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>All Reviews</title>
+</head>
+<body>
+<h1>All Reviews</h1>
+
+<ul>
+  <li th:each="review : ${reviewsList}">
+    <a th:href="@{/reviews/{id}(id=${review.id})}" th:text="${review.email}"></a> -
+    <span th:text="${review.reviewText}"></span>
+
+    <span th:if="${isAdmin}">
+            <a th:href="@{/reviews/delete/{id}(id=${review.id})}">Delete</a>
+        </span>
+  </li>
+</ul>
+
+<a href="/reviews">Add a Review</a>
+</body>
+</html>

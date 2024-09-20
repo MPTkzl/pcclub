@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px; /* Отступ для фиксированной навигационной панели */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.review-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-email {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.review-email:hover {
+    text-decoration: underline;
+}
+
+.review-text {
+    color: #2c3e50;
+}
+
+.btn-delete {
+    color: #e74c3c;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    text-decoration: underline;
+}
+
+.btn-back {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    background-color: #5dade2;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background-color: #2e86c1;
+}
+
+/* Стили для фиксированной навигационной панели */
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Закрепляем панель */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ставим выше других элементов */
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+.navbar .navbar-right {
+    margin-left: auto;
+}
+
+.navbar ul.navbar-right li {
+    margin-left: 20px;
+}

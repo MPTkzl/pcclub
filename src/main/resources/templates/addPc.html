@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить компьютер</title>
+  <link rel="stylesheet" href="/zal.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="navbar-brand" href="/home">PcКлуб</a>
+  <ul>
+    <li><a href="/general-Hall">Общий зал</a></li>
+    <li><a href="/bron">Бронь</a></li>
+    <li><a href="/food">Холодильник</a></li>
+    <li><a href="/reviews">Отзывы</a></li>
+    <li><a href="/addPc">АдминPc</a></li>
+    <li><a href="/admin/food/add">АдминFood</a></li>
+    <li><a href="/admin/reviews/all">АдминОтзыв</a></li>
+    <li><a href="/admin/payments">АдминПлатежи</a></li>
+    <li><a href="/admin/users">Админ панель</a></li>
+  </ul>
+  <ul class="navbar-right">
+    <li><a href="/login">Выйти</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1>Добавить новый компьютер</h1>
+
+  <form action="/admin/addPc" method="post" th:object="${computer}">
+    <div class="form-group">
+      <label for="name">Название:</label>
+      <input type="text" id="name" name="name" placeholder="Название" required th:field="*{name}">
+    </div>
+    <div class="form-group">
+      <label for="status">Статус:</label>
+      <input type="text" id="status" name="status" placeholder="Статус" required th:field="*{status}">
+    </div>
+    <div class="form-group">
+      <label for="specifications">Характеристики:</label>
+      <textarea id="specifications" name="specifications" placeholder="Характеристики" th:field="*{specifications}"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="pricePerHour">Цена за час:</label>
+      <input type="number" id="pricePerHour" name="pricePerHour" step="0.01" placeholder="Цена за час" required th:field="*{pricePerHour}">
+    </div>
+    <button type="submit" class="btn-submit">Добавить компьютер</button>
+  </form>
+
+
+</div>
+
+</body>
+</html>

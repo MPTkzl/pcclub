@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить еду</title>
+  <link rel="stylesheet" href="/adminfood.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="navbar-brand" href="/home">PcКлуб</a>
+  <ul>
+    <li><a href="/general-Hall">Общий зал</a></li>
+    <li><a href="/bron">Бронь</a></li>
+    <li><a href="/food">Холодильник</a></li>
+    <li><a href="/reviews">Отзывы</a></li>
+    <li><a href="/addPc">АдминPc</a></li>
+    <li><a href="/admin/food/add">АдминFood</a></li>
+    <li><a href="/admin/reviews/all">АдминОтзыв</a></li>
+    <li><a href="/admin/payments">АдминПлатежи</a></li>
+    <li><a href="/admin/users">Админ панель</a></li>
+  </ul>
+  <ul class="navbar-right">
+    <li><a href="/login">Выйти</a></li>
+  </ul>
+</nav>
+<h1>Добавить новую еду</h1>
+
+<form action="/admin/food/add" method="post">
+  <div>
+    <label for="name">Название:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="category">Категория:</label>
+    <input type="text" id="category" name="category" required>
+  </div>
+  <div>
+    <label for="price">Цена:</label>
+    <input type="number" id="price" name="price" step="0.01" required>
+  </div>
+  <div>
+    <label for="quantity">Количество:</label>
+    <input type="number" id="quantity" name="quantity" required>
+  </div>
+  <button type="submit">Добавить</button>
+</form>
+
+</body>
+</html>

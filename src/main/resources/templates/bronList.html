@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Все отзывы</title>
+  <link rel="stylesheet" href="/allReview.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="navbar-brand" href="/home">PcКлуб</a>
+  <ul>
+    <li><a href="/general-Hall">Общий зал</a></li>
+    <li><a href="/bron">Бронь</a></li>
+    <li><a href="/food">Холодильник</a></li>
+    <li><a href="/reviews">Отзывы</a></li>
+    <li><a href="/addPc">АдминPc</a></li>
+    <li><a href="/admin/food/add">АдминFood</a></li>
+    <li><a href="/admin/reviews/all">АдминОтзыв</a></li>
+    <li><a href="/admin/payments">АдминПлатежи</a></li>
+    <li><a href="/admin/users">Админ панель</a></li>
+  </ul>
+  <ul class="navbar-right">
+    <li><a href="/login">Выйти</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1>Все отзывы</h1>
+
+  <ul class="review-list">
+    <li th:each="review : ${reviewsList}" class="review-item">
+      <a th:href="@{/reviews/{id}(id=${review.id})}" class="review-email" th:text="${review.email}"></a> -
+      <span th:text="${review.reviewText}" class="review-text"></span>
+      <a sec:authorize="hasRole('ADMIN')" th:href="@{/admin/reviews/delete/{id}(id=${review.id})}" class="btn-delete">Удалить</a>
+    </li>
+  </ul>
+
+  <a href="/admin" class="btn-back">Назад</a>
+</div>
+
+</body>
+</html>

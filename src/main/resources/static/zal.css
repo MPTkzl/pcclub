@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Отступ для фиксированной панели */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button, .btn-add, .btn-back {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #2980b9;
+    cursor: pointer;
+}
+
+button:hover, .btn-add:hover, .btn-back:hover {
+    background-color: #3498db;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+.btn-update {
+    background-color: #f39c12;
+}
+
+.btn-update:hover {
+    background-color: #e67e22;
+}
+
+.computer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.computer-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.computer-item:last-child {
+    border-bottom: none;
+}
+
+.form-inline {
+    display: inline;
+}
+
+.btn-book, .btn-add, .btn-back {
+    margin-top: 10px;
+}
+
+/* Стили для фиксированной навигационной панели */
+.navbar {
+    width: 100%;
+    background-color: #3498db;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Фиксируем панель */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #1f618d;
+    border-radius: 5px;
+}
+
+.navbar .navbar-right {
+    margin-left: auto;
+}
+
+.navbar ul.navbar-right li {
+    margin-left: 20px;
+}

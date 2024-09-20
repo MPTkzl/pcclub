@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Review Details</title>
+</head>
+<body>
+<h1>Review Details</h1>
+<p>Email: <span th:text="${review.email}"></span></p>
+<p>Review: <span th:text="${review.reviewText}"></span></p>
+<a href="/admin/reviews/all">Back to Reviews List</a>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Review</title>
+  <link rel="stylesheet" href="/addReview.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="navbar-brand" href="/home">PcКлуб</a>
+  <ul>
+    <li><a href="/general-Hall">Общий зал</a></li>
+    <li><a href="/bron">Бронь</a></li>
+    <li><a href="/food">Холодильник</a></li>
+    <li><a href="/reviews">Отзывы</a></li>
+    <li><a href="/addPc">АдминPc</a></li>
+    <li><a href="/admin/food/add">АдминFood</a></li>
+    <li><a href="/admin/reviews/all">АдминОтзыв</a></li>
+    <li><a href="/admin/payments">АдминПлатежи</a></li>
+    <li><a href="/admin/users">Админ панель</a></li>
+  </ul>
+  <ul class="navbar-right">
+    <li><a href="/login">Выйти</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1>Добавить отзыв</h1>
+
+  <form th:action="@{/reviews}" th:object="${reviews}" method="post">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" th:field="*{email}" required />
+    </div>
+    <div class="form-group">
+      <label for="reviewText">Отзыв:</label>
+      <textarea id="reviewText" th:field="*{reviewText}" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Отправить</button>
+  </form>
+
+  <a href="/admin/reviews/all" class="btn-back">Назад к списку отзывов</a>
+</div>
+
+</body>
+</html>
